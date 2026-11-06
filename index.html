@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f5ee"><meta name="description" content="Menus scolaires d’Alfortville. Déjeuner et repas froids, actualisés depuis la source officielle GPSEA.">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml"><link rel="manifest" href="./manifest.webmanifest"><link rel="stylesheet" href="./style.css">
+  <title>Menus scolaires · Alfortville</title>
+</head>
+<body>
+  <a class="skip" href="#menu-content">Aller au menu</a>
+  <header class="topbar wrap">
+    <a class="brand" href="./" aria-label="Menus scolaires, accueil"><span class="brand-icon" aria-hidden="true">a<span>•</span></span><span>Menus scolaires</span></a>
+    <div class="header-right"><span class="town">ALFORTVILLE</span><button id="settings-toggle" class="icon-button" aria-expanded="false" aria-controls="settings" aria-label="Choisir l’établissement"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16M8 4v6m8 4v6"/></svg></button></div>
+  </header>
+  <main class="wrap">
+    <section class="school-line"><div><span class="school-mark" aria-hidden="true">⌂</span><div><h1 id="school-name">Dolet maternelle</h1><span id="audience-name">Maternelle · Alfortville</span></div></div><button class="text-button" id="change-school">Modifier <span aria-hidden="true">↗</span></button></section>
+    <section id="settings" class="settings" hidden aria-label="Choix des menus"><div class="fields"><label>Établissement<select id="school"><option value="72">Dolet maternelle</option></select></label><label>Convives<select id="audience"><option value="2">Maternelle</option></select></label></div><p>Votre choix est mémorisé uniquement sur cet appareil.</p><button class="text-button" id="settings-close">Fermer les réglages ↑</button></section>
+    <div class="toolbar"><p class="calendar-caption">Calendrier</p><div class="view-switch" role="group" aria-label="Affichage"><button data-view="day" aria-pressed="true">Jour</button><button data-view="week" aria-pressed="false">Semaine</button></div></div>
+    <p class="meal-note" id="meal-note">Déjeuner et prestation froide</p>
+    <section class="calendar" aria-label="Choix de la date"><div class="week-heading"><button id="prev-week" class="icon-button" aria-label="Semaine précédente">←</button><div><span class="eyebrow" id="week-number"></span><h2 id="week-label"></h2></div><button id="next-week" class="icon-button" aria-label="Semaine suivante">→</button></div><div id="days" class="days"></div><button id="today" class="today-button">Revenir à aujourd’hui</button></section>
+    <div class="data-line"><p id="status" role="status" aria-live="polite">Connexion aux menus officiels…</p><button id="refresh" class="text-button" aria-label="Actualiser les menus"><span aria-hidden="true">↻</span> Actualiser</button></div>
+    <section id="menu-content" aria-label="Menus" aria-busy="true"><div class="loading-card">Chargement des menus…</div></section>
+    <aside class="source-note"><span aria-hidden="true">ⓘ</span><p>Menus susceptibles de modification. <a href="https://sudestavenir.fr/votre-quotidien/votre-restauration/alfortville-scolaires-1/" target="_blank" rel="noopener noreferrer">Consulter la source officielle GPSEA ↗</a></p></aside>
+    <details class="about"><summary>À propos des données et du raccourci mobile</summary><p>Les menus sont demandés directement au module public GPSEA à chaque ouverture, à chaque changement de semaine et toutes les 15 minutes lorsque cette page reste ouverte. Une nouvelle vérification a lieu au retour sur la page après 5 minutes. La date affichée est celle de notre vérification ; la source ne fournit pas de date de publication.</p><p>En cas de panne, la dernière copie disponible pour l’établissement, les convives, chaque type de repas et la semaine choisis est signalée avec son âge. Aucun plat n’est inventé. Les choix et copies restent sur votre appareil, sans compte ni suivi publicitaire.</p><p>Pour retrouver l’application sur votre téléphone : dans le menu de votre navigateur, choisissez « Ajouter à l’écran d’accueil » (sur iPhone, ouvrez d’abord le menu Partager).</p><p>Pour toute question d’allergie, utilisez les informations et le contact de la restauration scolaire sur le site officiel.</p></details>
+  </main>
+  <footer class="wrap"><span>Application indépendante</span><span>Données publiques · GPSEA</span></footer>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
