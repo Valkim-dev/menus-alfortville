@@ -57,3 +57,7 @@ Aucun nom d’enfant, compte, profil personnel, analytique ou publicité. Les pr
 Vérification du 6 novembre 2026 : 10 tests réussis. Dans Chrome, les plats réels ont été chargés depuis l’API, le jeudi 5 a affiché le repas froid dans le même calendrier, et la semaine du 9 au 13 novembre a affiché ses propres plats ainsi que le jour férié du 11 fourni par la source. Les vues Jour et Semaine ont été contrôlées. Aucun débordement horizontal observé aux largeurs CSS mesurées de 390, 433 et 1422 pixels. Le mode semaine passe de cartes empilées sur mobile à cinq colonnes sur ordinateur. Les vérifications de panne et de cache sont des tests automatisés ; aucune panne du fournisseur n’a été provoquée.
 
 Publication autorisée dans le dépôt public `Valkim-dev/menus-alfortville`, avec GitHub Pages depuis la branche `main` à la racine. Les données restent récupérées à l’exécution depuis l’API publique, sans reconstruction du site chaque semaine.
+
+## Navigation et vues
+
+Les flèches précédente/suivante sélectionnent toujours le lundi de la semaine cible, quel que soit le jour consulté. Le bouton « Revenir à aujourd’hui » reste indépendant. Sur téléphone (600 pixels CSS ou moins), la vue Jour affiche le menu détaillé du jour sélectionné ; la vue Semaine présente cinq lignes compactes avec date, plat principal et indication de repas froid. Toucher une ligne déplie tous les plats et les informations de la source. Sur ordinateur, la vue Semaine conserve ses cartes en colonnes. Le rendu s’adapte aussi lorsqu’on change la largeur de la fenêtre.
